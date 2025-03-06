@@ -28,6 +28,7 @@ export default function Sidebar() {
           },
         ].map((each) => (
           <NavLink
+            key={each.label}
             to={each.route}
             className={({ isActive }) =>
               isActive
