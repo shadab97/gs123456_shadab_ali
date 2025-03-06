@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import storeReducer from "./features/store/storeSlice";
+import skuReducer from "./features/sku/skuSlice";
 
 export const store = configureStore({
   reducer: {
     store: storeReducer,
+    sku: skuReducer,
   },
 });
 
