@@ -1,24 +1,19 @@
 import { Outlet } from "react-router";
 import "./App.css";
+import Header from "./components/header";
+import Sidebar from "./components/sidebar";
 
 function App() {
   return (
     <div className="app">
-      <header>header</header>
+      <Header />
 
-      <aside>
-        <nav>
-          <a href="/store">Store</a>
-          <a href="/sku">SKU</a>
-          <a href="/planning">Planning</a>
-          <a href="/chart">Chart</a>
-        </nav>
-      </aside>
-
-      <main>
-        <Outlet />
+      <main className="flex">
+        <Sidebar />
+        <div className="flex-1 p-8 flex-col bg-gray-200">
+          <Outlet />
+        </div>
       </main>
-      <footer>footer</footer>
     </div>
   );
 }
